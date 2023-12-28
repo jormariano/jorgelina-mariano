@@ -1,0 +1,61 @@
+.inicio-personal {
+    display: flex;
+}
+
+.inicio-texto {
+    text-align: center;
+    margin: 10px;
+}
+
+.inicio-texto h2 {
+    font-size: 60px;
+    font-style: italic;
+    text-align: center;
+    margin: 15px auto;
+    color: white;
+    font-weight: bold;
+    width: max-content;
+    animation: teclear 3s steps(21)
+}
+
+@keyframes teclear {
+    from {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+.inicio-texto h3,
+h4 {
+    margin: 40px auto;
+    color: white;
+}
+
+.inicio-texto h3 {
+    font-size: 30px;
+}
+
+.inicio-texto h4 {
+    font-size: 20px;
+}
+
+.inicio-info {
+    display: flex;
+    justify-content: center;
+}
+
+.inicio-cv {
+    margin: 10px;
+}
+
+.inicio-link {
+    margin: 10px;
+}
+
+.foto-personal {
+    width: 450px;
+    height: 500px;
+}

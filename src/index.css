@@ -1,0 +1,21 @@
+/*--- RESETEO ---*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*--- BODY ---*/
+
+body {
+  background-color: #436696;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* PALETA DE COLORES:
+
+background-color: #436696;
+color: #E4E8ED;
+
+*/

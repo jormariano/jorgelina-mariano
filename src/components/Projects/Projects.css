@@ -1,0 +1,13 @@
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.project-img {
+  height: 200px;
+  width: 400px;
+  margin: 20px;
+}
