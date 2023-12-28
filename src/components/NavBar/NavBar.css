@@ -6,8 +6,12 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.nav-bar {
+    display: flex;
+}
+
 .un-list {
-    margin: 0px;
+    margin: 0px 40px;
     padding: 0px;
 }
 
@@ -25,4 +29,15 @@ li {
     text-decoration: none;
     cursor: pointer;
     color: white;
+}
+
+.nav-bar button {
+    background-color: #2C0E47;
+    font-size: 16px;
+    padding: 5px;
+    width: 100px;
+    color: #ebe2e2;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0 auto;
 }

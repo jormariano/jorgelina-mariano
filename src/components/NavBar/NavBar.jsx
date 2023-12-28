@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 const NavBar = () => {
   return (
     <header>
-      <nav>
+      <nav className='nav-bar'>
         <ul className='un-list'>
 
           <li><NavLink to="/" className="nav-link">ABOUT ME</NavLink></li>
@@ -15,6 +15,7 @@ const NavBar = () => {
 
           <li><NavLink to="/contact" className="nav-link"> CONTACT </NavLink></li>
         </ul>
+        <button>Spanish</button>
       </nav>
     </header>
   )
