@@ -1,3 +1,4 @@
+import './App.css'
 import NavBar from "./components/NavBar/NavBar"
 import AboutMe from "./components/AboutMe/AboutMe"
 import Projects from "./components/Projects/Projects"
@@ -5,8 +6,12 @@ import Studies from "./components/Studies/Studies"
 import Contact from "./components/Contact/Contact"
 import Footer from "./components/Footer/Footer"
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import { useTranslation } from "react-i18next"
 
 const App = () => {
+
+  const { t } = useTranslation(['global'])
+
   return (
     <>
       <BrowserRouter>
@@ -16,7 +21,7 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/studies" element={<Studies />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path='*' element={<div className='en-construccion'><h2>Este sitio no existe. Vuelve al</h2> <Link to='/'><h2>Inicio</h2></Link></div>} />
+          <Route path='*' element={<div className='not-found'><h2>{t('app.notfound')}</h2> <Link className='not-found-link' to='/'><h2>{t('navbar.aboutme')}</h2></Link></div>} />
         </Routes>
         <Footer />
       </BrowserRouter>

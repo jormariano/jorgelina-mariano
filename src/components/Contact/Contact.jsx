@@ -1,11 +1,14 @@
 import './Contact.css'
-import { useState } from 'react';
+import { useState } from 'react'
 import emailjs from 'emailjs-com'
+import { useTranslation } from 'react-i18next'
 
 const Contact = () => {
-  const [nombre, setNombre] = useState('');
-  const [email, setEmail] = useState('');
-  const [consulta, setConsulta] = useState('');
+  const [nombre, setNombre] = useState('')
+  const [email, setEmail] = useState('')
+  const [consulta, setConsulta] = useState('')
+
+  const { t } = useTranslation(['global'])
 
   const enviarConsulta = (e) => {
       e.preventDefault();
@@ -23,10 +26,10 @@ const Contact = () => {
           "E4zHwwYn3G-EMcNrP"
       )
           .then(() => {
-              alert("Consulta enviada")
+              alert(t('contactme.querysent'))
           })
           .catch(() => {
-              alert("Error, intente nuevamente")
+              alert(t('contactme.error'))
           })
 
       setNombre("");
@@ -39,17 +42,17 @@ const Contact = () => {
 
       <form onSubmit={enviarConsulta} className="contact-form">
 
-          <h3 className='contact-form-h3'>CONTÁCTAME</h3>
+          <h3 className='contact-form-h3'> {t('navbar.contactme')} </h3>
 
-          <input type="text" placeholder="NOMBRE COMPLETO *" id="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)}></input>
+          <input type="text" placeholder={t('contactme.fullname')} id="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)}></input>
 
-          <input type="email" placeholder="E-MAIL *" id="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+          <input type="email" placeholder={t('contactme.email')} id="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
 
-          <textarea value={consulta} placeholder="MENSAJE *" onChange={(e) => setConsulta(e.target.value)}></textarea>
+          <textarea value={consulta} placeholder={t('contactme.message')} onChange={(e) => setConsulta(e.target.value)}></textarea>
 
-          <button type="submit" className='contact-form-button'>ENVIAR CONSULTA</button>
+          <button type="submit" className='contact-form-button'> {t('contactme.query')} </button>
           
-          <p>Campos marcados con (*) obligatorios</p>
+          <p> {t('contactme.obligatory')} </p>
 
       </form>
   )

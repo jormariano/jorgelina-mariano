@@ -9,6 +9,10 @@
     color: white;
 }
 
+.career-container {
+    width: 500px;
+}
+
 .stacks-container {
     display: flex;
     flex-wrap: wrap;

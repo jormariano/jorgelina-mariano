@@ -1,7 +1,10 @@
 import './Studies.css'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Studies = () => {
+
+  const { t } = useTranslation(['global'])
 
   const imgSass = './icon/icon-sass.png'
   const imgBootstrap = './icon/icon-bootstrap.png'
@@ -18,26 +21,28 @@ const Studies = () => {
 
   return (
     <div className='studies-container'>
-      <div>
-        <h2> FORMATION </h2>
+      <div className='career-container'>
+        <h2> {t('studies.title')} </h2>
         <div>
-          <p> Carrera Desarrollo Backend </p>
-          <h3> Coderhouse </h3>
-          <h3> In progress </h3>
+          <h3> {t('studies.carrerB')} </h3>
+          <h4> {t('studies.company')} </h4>
+          <h4> {t('studies.statusI')} </h4>
         </div>
         <div>
-          <p> Carrera Desarrollo Frontend </p>
-          <h3> Coderhouse </h3>
-          <Link target="_blank" to='https://www.coderhouse.com/certificados/64ececa954074c4963c57ee0?lang=es'><h3> View Certificate </h3></Link>
+          <h3> {t('studies.carrerF')} </h3>
+          <h4> {t('studies.company')} </h4>
+          <h4> {t('studies.statusC')} </h4>
+          <Link target="_blank" to='https://www.coderhouse.com/certificados/64ececa954074c4963c57ee0?lang=es'><h3> {t('studies.certificate')} </h3></Link>
         </div>
         <div>
-          <p> English elementary </p>
-          <h3> Coderhouse </h3>
-          <Link target="_blank" to='https://www.coderhouse.com/certificados/654540f9ce060016d195dcf6?lang=es' ><h3> View Certificate </h3></Link>
+          <h3> {t('studies.carrerE')} </h3>
+          <h4> {t('studies.company')} </h4>
+          <h4>  {t('studies.statusC')} </h4>
+          <Link target="_blank" to='https://www.coderhouse.com/certificados/654540f9ce060016d195dcf6?lang=es' ><h3> {t('studies.certificate')} </h3></Link>
         </div>
       </div>
       <div>
-        <h2> MY STACKS </h2>
+        <h2> {t('studies.title2')} </h2>
         <div className='stacks-container'>
           <div className='icon-container'>
             <img src={imgReactjs} alt='Icon React Js' />

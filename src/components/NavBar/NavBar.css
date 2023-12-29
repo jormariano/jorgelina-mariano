@@ -30,14 +30,3 @@ li {
     cursor: pointer;
     color: white;
 }
-
-.nav-bar button {
-    background-color: #2C0E47;
-    font-size: 16px;
-    padding: 5px;
-    width: 100px;
-    color: #ebe2e2;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin: 0 auto;
-}
