@@ -1,9 +1,9 @@
 {
     "app.notfound": "Este sitio no existe. Vuelve a ",
-    "navbar.aboutme": "ACERCA DE MÍ",
-    "navbar.projects": "PROYECTOS",
-    "navbar.studies": "ESTUDIOS",
-    "navbar.contactme": "CONTÁCTAME",
+    "navbar.aboutme": "Acerca de mí",
+    "navbar.projects": "Proyectos",
+    "navbar.studies": "Estudios",
+    "navbar.contactme": "Contáctame",
     "aboutme.title": "¡BIENVENIDO! Soy Jorgelina",
     "aboutme.subtitle": "y es un placer conocerte.",
     "aboutme.paragraph": "Como Desarrolladora Frontend me apasiona crear experiencias web atractivas y funcionales.",

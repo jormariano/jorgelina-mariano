@@ -4,19 +4,19 @@ import emailjs from 'emailjs-com'
 import { useTranslation } from 'react-i18next'
 
 const Contact = () => {
-  const [nombre, setNombre] = useState('')
+  const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
-  const [consulta, setConsulta] = useState('')
+  const [message, setMessage] = useState('')
 
   const { t } = useTranslation(['global'])
 
-  const enviarConsulta = (e) => {
+  const sendQuery = (e) => {
       e.preventDefault();
 
       const templateParams = {
-          from_name: nombre,
+          from_name: fullName,
           from_email: email,
-          message: consulta
+          message: message
       };
 
       emailjs.send(
@@ -32,23 +32,23 @@ const Contact = () => {
               alert(t('contactme.error'))
           })
 
-      setNombre("");
+      setFullName("");
       setEmail("");
-      setConsulta("");
+      setMessage("");
   }
 
 
   return (
 
-      <form onSubmit={enviarConsulta} className="contact-form">
+      <form onSubmit={sendQuery} className="contact-form">
 
           <h3 className='contact-form-h3'> {t('navbar.contactme')} </h3>
 
-          <input type="text" placeholder={t('contactme.fullname')} id="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)}></input>
+          <input type="text" placeholder={t('contactme.fullname')} id="fullName" value={fullName} onChange={(e) => setFullName(e.target.value)}></input>
 
           <input type="email" placeholder={t('contactme.email')} id="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
 
-          <textarea value={consulta} placeholder={t('contactme.message')} onChange={(e) => setConsulta(e.target.value)}></textarea>
+          <textarea placeholder={t('contactme.message')} value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
 
           <button type="submit" className='contact-form-button'> {t('contactme.query')} </button>
           

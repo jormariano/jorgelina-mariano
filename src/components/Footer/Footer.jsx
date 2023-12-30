@@ -1,5 +1,4 @@
 import './Footer.css'
-import { Link } from 'react-router-dom'
 
 const Footer = () => {
 
@@ -11,9 +10,9 @@ const Footer = () => {
     <div className='footer'>
       <div className='footer-socialnetworks'>
         <a href="https://linkedin.com/in/jorgelina-mariano" target="_blank"><img src={imgLinkedIn}
-          alt="Enlace a LinkedIn" /></a>
+          alt="Link to LinkedIn" /></a>
         <a href="https://github.com/jormariano" target="_blank"><img src={imgGitHub}
-          alt="Enlace a GitHub" /></a>
+          alt="Link to GitHub" /></a>
       </div>
       <div className='footer-copy-logo'>
         <p className='footer-copyright'> Copyright © 2023 - Jorgelina Mariano</p>

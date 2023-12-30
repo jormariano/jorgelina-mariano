@@ -1,13 +1,13 @@
 import './AboutMe.css'
 import { useTranslation } from 'react-i18next'
-import PdfFileEn from '../../../public/pdf/CVJorgelinaMariano_en.pdf'
-import PdfFileEs from '../../../public/pdf/CVJorgelinaMariano_es.pdf'
+import PdfFileEn from '../../pdf/CVJorgelinaMariano_es.pdf'
+import PdfFileEs from '../../pdf/CVJorgelinaMariano_en.pdf'
 
 const AboutMe = () => {
 
     const {t, i18n } = useTranslation(['global'])
 
-    const imgFoto = './img/foto-personal.jpg'
+    const imgPhoto = './img/personal-photo1.png'
 
     const getLanguageSuffix = () => {
         
@@ -16,7 +16,7 @@ const AboutMe = () => {
 
     const viewPdf = () => {
         const pdfFileName = `CVJorgelinaMariano${getLanguageSuffix()}.pdf`
-        const pdfFileUrl = i18n.language === 'en' ? PdfFileEn : PdfFileEs;
+        const pdfFileUrl = i18n.language === 'en' ? PdfFileEs : PdfFileEn;
        
         window.open(pdfFileUrl, '_blank')
     }
@@ -31,19 +31,18 @@ const AboutMe = () => {
 
     return (
         <>
-            <div className='inicio-personal'>
-                <div className='inicio-texto'>
-                    <h2>{t('aboutme.title')}</h2>
-                    <h2>{t('aboutme.subtitle')}</h2>
-                    <h4>{t('aboutme.paragraph')}</h4>
-                    <h4>{t('aboutme.paragraph2')}</h4>
-                    <div style={{ position: 'absolute', width: '100%', height: '100%' }}>
-                        <button onClick={viewPdf}>{t('aboutme.viewPdf')}</button>
-                        <button onClick={downloadPdf}>{t('aboutme.downloadPdf')}</button>
+            <div className='aboutme-container'>
+                <div className='aboutme-text'>
+                    <h2 className='aboutme-text-h2'>{t('aboutme.title')}</h2>
+                    <h3 className='aboutme-text-h3'>{t('aboutme.subtitle')}</h3>
+                    <h4 className='aboutme-text-h4'>{t('aboutme.paragraph')}</h4>
+                    <h4 className='aboutme-text-h4'>{t('aboutme.paragraph2')}</h4>
+                    <div className='aboutme-buttons'>
+                        <button className='aboutme-button' onClick={viewPdf}>{t('aboutme.viewPdf')}</button>
+                        <button className='aboutme-button' onClick={downloadPdf}>{t('aboutme.downloadPdf')}</button>
                     </div>
-
                 </div>
-                <img className='foto-personal' src={imgFoto} alt='foto personal' />
+                <img className='personal-photo' src={imgPhoto} alt='personal photo' />
             </div>
         </>
     )

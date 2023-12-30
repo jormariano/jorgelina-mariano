@@ -1,9 +1,9 @@
 {
     "app.notfound": "This site doesn't exist. Go back ",
-    "navbar.aboutme": "ABOUT ME",
-    "navbar.projects": "PROJECTS",
-    "navbar.studies": "STUDIES",
-    "navbar.contactme": "CONTACT ME",
+    "navbar.aboutme": "About me",
+    "navbar.projects": "Projects",
+    "navbar.studies": "Studies",
+    "navbar.contactme": "Contact me",
     "aboutme.title": "¡WELCOME! I'm Jorgelina",
     "aboutme.subtitle": "and it's a pleasure to meet you.",
     "aboutme.paragraph": "As a Frontend Developer, I am passionate about creating engaging and functional web experiences.",
