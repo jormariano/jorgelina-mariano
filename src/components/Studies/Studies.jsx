@@ -24,31 +24,27 @@ const Studies = () => {
       <div className='career-container'>
         <h2 className='career-h2'> {t('studies.title')} </h2>
         <div className='career-styles'>
-          <div className='career-styles-i'>
-            <div className='career-studies'>
-              <h3 className='career-studies-h3'> {t('studies.careerB')} </h3>
-              <h4 className='career-studies-h4'> {t('studies.company')} </h4>
-              <h4 className='career-studies-h4'> {t('studies.status')} {t('studies.statusI')} </h4>
-            </div>
-            <div className='career-studies'>
-              <h3 className='career-studies-h3'> {t('studies.careerEB')} </h3>
-              <h4 className='career-studies-h4'> {t('studies.aba')} </h4>
-              <h4 className='career-studies-h4'> {t('studies.status')} {t('studies.statusI')} </h4>
-            </div>
+          <div className='career-studies'>
+            <h3 className='career-studies-h3'> {t('studies.careerB')} </h3>
+            <h4 className='career-studies-h4'> {t('studies.company')} </h4>
+            <h4 className='career-studies-h4'> {t('studies.status')} {t('studies.statusI')} </h4>
           </div>
-          <div className='career-styles-i'>
-            <div className='career-studies'>
-              <h3 className='career-studies-h3'> {t('studies.careerF')} </h3>
-              <h4 className='career-studies-h4'> {t('studies.company')} </h4>
-              <h4 className='career-studies-h4'> {t('studies.status')} {t('studies.statusC')} </h4>
-              <Link className='career-studies-link' target="_blank" to='https://www.coderhouse.com/certificados/64ececa954074c4963c57ee0?lang=es'><h3 className='career-link'> {t('studies.certificate')} </h3></Link>
-            </div>
-            <div className='career-studies'>
-              <h3 className='career-studies-h3'> {t('studies.careerEA')} </h3>
-              <h4 className='career-studies-h4'> {t('studies.company')} </h4>
-              <h4 className='career-studies-h4'> {t('studies.status')} {t('studies.statusC')} </h4>
-              <Link className='career-studies-link' target="_blank" to='https://www.coderhouse.com/certificados/654540f9ce060016d195dcf6?lang=es' ><h3 className='career-link'> {t('studies.certificate')} </h3></Link>
-            </div>
+          <div className='career-studies'>
+            <h3 className='career-studies-h3'> {t('studies.careerEB')} </h3>
+            <h4 className='career-studies-h4'> {t('studies.aba')} </h4>
+            <h4 className='career-studies-h4'> {t('studies.status')} {t('studies.statusI')} </h4>
+          </div>
+          <div className='career-studies'>
+            <h3 className='career-studies-h3'> {t('studies.careerF')} </h3>
+            <h4 className='career-studies-h4'> {t('studies.company')} </h4>
+            <h4 className='career-studies-h4'> {t('studies.status')} {t('studies.statusC')} </h4>
+            <Link className='career-studies-link' target="_blank" to='https://www.coderhouse.com/certificados/64ececa954074c4963c57ee0?lang=es'><h3 className='career-link'> {t('studies.certificate')} </h3></Link>
+          </div>
+          <div className='career-studies'>
+            <h3 className='career-studies-h3'> {t('studies.careerEA')} </h3>
+            <h4 className='career-studies-h4'> {t('studies.company')} </h4>
+            <h4 className='career-studies-h4'> {t('studies.status')} {t('studies.statusC')} </h4>
+            <Link className='career-studies-link' target="_blank" to='https://www.coderhouse.com/certificados/654540f9ce060016d195dcf6?lang=es' ><h3 className='career-link'> {t('studies.certificate')} </h3></Link>
           </div>
         </div>
       </div>
@@ -106,6 +102,8 @@ const Studies = () => {
         </div>
       </div>
     </div>
+
+
   )
 }
 

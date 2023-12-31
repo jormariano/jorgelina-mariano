@@ -1,8 +1,7 @@
 .studies-container {
     width: 100%;
-    height: 80vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     color: white;
@@ -10,29 +9,32 @@
 
 .career-h2 {
     margin: 20px 0px;
-    font-size: 26px;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 
 .career-styles {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr; 	
+    grid-template-rows: 2fr 2fr;
 }
 
 .career-studies {
+    padding: 5px;
     margin: 20px 10px;
-    height: 130px;
     border-left: double 5px white;
 }
 
 .career-studies-h3 {
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 .career-studies-h4 {
     margin-bottom: 5px;
+    font-size: 1.6rem;
 }
 
 .career-studies-link {
@@ -52,7 +54,8 @@
 
 .stacks-h2 {
     margin: 20px 0px;
-    font-size: 26px;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -74,4 +77,24 @@
 
 .icon-container-p {
     margin-top: 5px;
+}
+
+@media (max-width: 1250px) {
+    .studies-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 800px) {
+    .career-styles {
+        grid-template-columns: 2fr; 	
+        grid-template-rows: 2fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .stacks-styles {
+        grid-template-columns: 2fr 2fr 2fr; 	
+        grid-template-rows: 2fr 2fr 2fr 2fr;
+    }
 }
