@@ -1,28 +1,77 @@
 .studies-container {
+    width: 100%;
+    height: 80vh;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    gap: 60px;
     color: white;
 }
 
-.career-container {
-    width: 500px;
+.career-h2 {
+    margin: 20px 0px;
+    font-size: 26px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 
-.stacks-container {
+.career-styles {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.career-studies {
+    margin: 20px 10px;
+    height: 130px;
+    border-left: double 5px white;
+}
+
+.career-studies-h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.career-studies-h4 {
+    margin-bottom: 5px;
+}
+
+.career-studies-link {
+    text-decoration: none;
+}
+
+.career-link {
+    color: white;
+    margin-top: 20px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.career-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+.stacks-h2 {
+    margin: 20px 0px;
+    font-size: 26px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.stacks-styles {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr; 	
+    grid-template-rows: 2fr 2fr 2fr;
 }
 
 .icon-container {
-    margin: 10px;
+    margin: 20px;
+    text-align: center;
 }
 
-.icon-container img {
-    width: 30px;
-    height: 32px;
+.icon-container-img {
+    width: 70px;
+    height: 70px;
+}
+
+.icon-container-p {
+    margin-top: 5px;
 }

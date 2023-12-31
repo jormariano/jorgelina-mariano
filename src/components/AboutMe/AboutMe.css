@@ -1,34 +1,35 @@
 .aboutme-container {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 40px;
     height: 80vh;
 }
 
-.aboutme-text {
+.aboutme-text-container {
     text-align: center;
-    margin: 10px;
-    width: 850px;
 }
 
 .aboutme-text-h2 {
-    font-size: 40px;
+    font-size: 3rem;
     font-style: italic;
     text-align: center;
     margin: 15px auto 20px auto;
     color: white;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
     width: max-content;
-    animation: teclear 3s steps(22)
+    animation: teclear 3s steps(34)
 }
 
 .aboutme-text-h3 {
-    font-size: 30px;
+    font-size: 2rem;
     font-style: italic;
     text-align: center;
-    margin: 0px auto 30px auto;
+    margin: 0px auto 50px auto;
     color: white;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
     width: max-content;
-    animation: teclear 3s steps(26)
+    animation: teclear 3s steps(32)
 }
 
 @keyframes teclear {
@@ -41,11 +42,20 @@
     }
 }
 
+.aboutme-text {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #040936ce;
+    margin: 10px 40px;
+}
+
 .aboutme-text-h4 {
-    margin: 20px auto;
+    margin: 10px auto;
     letter-spacing: 0.6px;
     color: white;
     font-size: 20px;
+    text-align: justify;
 }
 
 .aboutme-buttons {
@@ -53,18 +63,25 @@
 }
 
 .aboutme-button {
-    background-color: #2C0E47;
-    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
     padding: 5px;
-    width: 160px;
-    color: #ebe2e2;
+    color: white;
     font-weight: bold;
     letter-spacing: 1px;
-    margin: 20px;
+    margin: 40px 20px;
+    background: none;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.aboutme-button:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
 }
 
 .personal-photo {
     width: 450px;
     height: 480px;
-    margin: 10px;
+    margin: 10px 60px;
 }
