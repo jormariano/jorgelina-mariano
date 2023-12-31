@@ -7,10 +7,10 @@ const NavBar = () => {
 
   const { t } = useTranslation(['global'])
 
-  const iconAboutme = './public/icon/navbar-aboutme.svg'
-  const iconProjects = './public/icon/navbar-projects.svg'
-  const iconStudies = './public/icon/navbar-studies.svg'
-  const iconContactme = './public/icon/navbar-contactme.svg'
+  const iconAboutme = './icon/navbar-aboutme.svg'
+  const iconProjects = './icon/navbar-projects.svg'
+  const iconStudies = './icon/navbar-studies.svg'
+  const iconContactme = './icon/navbar-contactme.svg'
 
   return (
     <header>
@@ -45,10 +45,5 @@ const NavBar = () => {
     </header>
   )
 }
-
-// <select className='language' id="languageSelector" onChange={handleChangeLanguage} value={i18n.language}>
-// <option className='language-option' value="es">Español</option>
-// <option className='language-option' value="en">English</option>
-// </select>
 
 export default NavBar
