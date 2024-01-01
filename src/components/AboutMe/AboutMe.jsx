@@ -1,5 +1,7 @@
 import './AboutMe.css'
+import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+import { motion, useInView } from 'framer-motion'
 import PdfFileEn from '../../pdf/CVJorgelinaMariano_es.pdf'
 import PdfFileEs from '../../pdf/CVJorgelinaMariano_en.pdf'
 
@@ -29,6 +31,11 @@ const AboutMe = () => {
         link.click();
     }
 
+    const ref = useRef(null)
+    const userView = useInView(ref, {
+        once: true
+    })
+
     return (
         <>
             <div className='aboutme-container'>
@@ -40,14 +47,17 @@ const AboutMe = () => {
                     <div className='aboutme-text'>
                         <h4 className='aboutme-text-h4'>{t('aboutme.paragraph')}</h4>
                         <h4 className='aboutme-text-h4'>{t('aboutme.paragraph2')}</h4>
-                        <h4 className='aboutme-text-h4'>{t('aboutme.paragraph3')}</h4>
                     </div>
                     <div className='aboutme-buttons'>
                         <button className='aboutme-button' onClick={viewPdf}>{t('aboutme.viewPdf')}</button>
                         <button className='aboutme-button' onClick={downloadPdf}>{t('aboutme.downloadPdf')}</button>
                     </div>
                 </div>
-                <img className='personal-photo' src={imgPhoto} alt='personal photo' />
+                <motion.img
+                ref={ref}
+                initial= {{opacity: 0, scale: 0}}
+                animate= { userView ? {opacity: 1, scale: 1, transition: {duration: 1}} : ""}
+                className='personal-photo' src={imgPhoto} alt='personal photo' />
             </div >
         </>
     )

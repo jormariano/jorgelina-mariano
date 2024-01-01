@@ -2,6 +2,7 @@ import './Contact.css'
 import { useState } from 'react'
 import emailjs from 'emailjs-com'
 import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion'
 
 const Contact = () => {
     const [fullName, setFullName] = useState('')
@@ -39,7 +40,10 @@ const Contact = () => {
 
 
     return (
-        <div className="contact-container">
+        <motion.div
+            initial={{ opacity: 0,  scale: 0, }}
+            animate={{ opacity: 1,  scale: 1, transition: { duration: 1 } }}
+            className="contact-container">
             <form onSubmit={sendQuery} className="contact-form">
 
                 <h3 className='contact-form-h3'> {t('navbar.contactme')}! </h3>
@@ -55,7 +59,7 @@ const Contact = () => {
                 <p className='contact-form-p'> {t('contactme.obligatory')} </p>
 
             </form>
-        </div>
+        </motion.div>
     )
 }
 

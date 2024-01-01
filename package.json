@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "emailjs-com": "^3.2.0",
+    "framer-motion": "^10.16.16",
     "i18next": "^23.7.12",
     "i18next-http-backend": "^2.4.2",
     "react": "^18.2.0",

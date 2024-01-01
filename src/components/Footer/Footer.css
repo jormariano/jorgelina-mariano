@@ -13,26 +13,20 @@
 .footer-socialnetworks a img {
     padding: 0px;
     margin: 0px 10px;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
 }
 
 .footer-copy-logo {
     display: flex;
     justify-content: center;
-    margin: 5px 0px;
 }
 
 .footer-copyright {
     color: white;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
     font-weight: bold;
     font-size: 0.8rem;
-    margin-top: 2px;
+    margin-top: 5px;
     margin-bottom: 0px;
-}
-
-.img-logo-footer {
-    height: 21px;
-    width: 100px;
-    margin: 0px 5px;
 }
