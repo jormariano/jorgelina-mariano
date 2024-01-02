@@ -1,5 +1,6 @@
 import './Footer.css'
 import { motion } from 'framer-motion'
+import ScrollToTop from "react-scroll-to-top"
 
 const Footer = () => {
 
@@ -9,6 +10,7 @@ const Footer = () => {
   return (
     <>
     <div className='footer'>
+    <ScrollToTop smooth to="20" color="#f03c90" width="20" style={{right: "25px", width: "30px", height: "30px"}}/>
       <div className='footer-socialnetworks'>
         <a href="https://linkedin.com/in/jorgelina-mariano" target="_blank">
           <motion.img 
