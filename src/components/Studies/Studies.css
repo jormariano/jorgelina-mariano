@@ -1,4 +1,5 @@
 .studies-container {
+    height: 80vh;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -8,16 +9,15 @@
 }
 
 .career-h2 {
-    margin: 20px 0px;
     font-size: 2.5rem;
     letter-spacing: 1px;
-    color: #f03c90;
+    color: #f6b8d5;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 
 .career-styles {
     display: grid;
-    grid-template-columns: 2fr 2fr; 	
+    grid-template-columns: 2fr 2fr;
     grid-template-rows: 2fr 2fr;
     text-align: left;
 }
@@ -41,8 +41,8 @@
     padding-left: 15px;
 }
 
-.career-studies-h5 { 
-    color: #f03c90;
+.career-studies-h5 {
+    color: #f6b8d5;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
     font-size: 1.2rem;
     padding-left: 15px;
@@ -54,7 +54,7 @@
 }
 
 .career-link {
-    color: #f03c90;
+    color: #f6b8d5;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
     margin-top: 20px;
     padding-left: 15px;
@@ -67,16 +67,15 @@
 }
 
 .stacks-h2 {
-    margin: 20px 0px;
     font-size: 2.5rem;
     letter-spacing: 1px;
-    color: #f03c90;
+    color: #f6b8d5;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 
 .stacks-styles {
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr; 	
+    grid-template-columns: 2fr 2fr 2fr 2fr;
     grid-template-rows: 2fr 2fr 2fr;
 }
 
@@ -97,19 +96,32 @@
 @media (max-width: 1250px) {
     .studies-container {
         flex-direction: column;
+        height: 100%;
     }
 }
 
 @media (max-width: 800px) {
     .career-styles {
-        grid-template-columns: 2fr; 	
+        grid-template-columns: 2fr;
         grid-template-rows: 2fr;
     }
 }
 
 @media (max-width: 400px) {
+    .studies-container {
+        margin-top: 80px;
+    }
+
+    .career-studies-h3 {
+        font-size: 1.5rem;
+    }
+
+    .stacks-h2 {
+        margin-top: 50px;
+    }
+
     .stacks-styles {
-        grid-template-columns: 2fr 2fr 2fr; 	
+        grid-template-columns: 2fr 2fr 2fr;
         grid-template-rows: 2fr 2fr 2fr 2fr;
     }
 }

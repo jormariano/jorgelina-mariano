@@ -1,8 +1,8 @@
 import './Contact.css'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import emailjs from 'emailjs-com'
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 
 const Contact = () => {
     const [fullName, setFullName] = useState('')
@@ -38,28 +38,35 @@ const Contact = () => {
         setMessage("");
     }
 
+    const ref = useRef(null)
+    const userView = useInView(ref, {
+        once: true
+    })
 
     return (
-        <motion.div
-            initial={{ opacity: 0,  scale: 0, }}
-            animate={{ opacity: 1,  scale: 1, transition: { duration: 1 } }}
-            className="contact-container">
-            <form onSubmit={sendQuery} className="contact-form">
+        <section id="contact">
+            <motion.div
+                ref={ref}
+                initial={{ opacity: 0, scale: 0, }}
+                animate={userView ? { opacity: 1, scale: 1, transition: { duration: 1 } } : ""}
+                className="contact-container">
+                <form onSubmit={sendQuery} className="contact-form">
 
-                <h3 className='contact-form-h3'> {t('navbar.contactme')}! </h3>
+                    <h3 className='contact-form-h3'> {t('contacme.title')} </h3>
 
-                <input type="text" placeholder={t('contactme.fullname')} id="fullName" value={fullName} onChange={(e) => setFullName(e.target.value)}></input>
+                    <input type="text" placeholder={t('contactme.fullname')} id="fullName" value={fullName} onChange={(e) => setFullName(e.target.value)}></input>
 
-                <input type="email" placeholder={t('contactme.email')} id="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                    <input type="email" placeholder={t('contactme.email')} id="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
 
-                <textarea placeholder={t('contactme.message')} value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+                    <textarea placeholder={t('contactme.message')} value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
 
-                <button type="submit" className='contact-form-button'> {t('contactme.query')} </button>
+                    <button type="submit" className='contact-form-button'> {t('contactme.query')} </button>
 
-                <p className='contact-form-p'> {t('contactme.obligatory')} </p>
+                    <p className='contact-form-p'> {t('contactme.obligatory')} </p>
 
-            </form>
-        </motion.div>
+                </form>
+            </motion.div>
+        </section>
     )
 }
 

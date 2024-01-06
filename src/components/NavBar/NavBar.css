@@ -55,7 +55,26 @@ header nav ul li {
 }
 
 @media (max-width: 650px) {
-    header {
-        flex-direction: column;
+    .nav-link img {
+        width: 30px;
+        height: 30px;
+    }
+
+    header nav ul {
+        margin: 0px 10px;
+    }
+
+    header nav ul li {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    header nav ul {
+        margin: 5px;
+    }
+
+    header nav ul li {
+        margin: 5px;
     }
 }

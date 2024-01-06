@@ -1,5 +1,5 @@
 import './NavBar.css'
-import { NavLink } from 'react-router-dom'
+import { Link as ScrollLink } from 'react-scroll'
 import { useTranslation } from 'react-i18next'
 import Languages from '../Languages/Languages'
 
@@ -17,31 +17,51 @@ const NavBar = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/" className="nav-link">
+            <ScrollLink to="aboutme"
+              spy={true}
+              smooth={true}
+              offset={-150}
+              duration={500}
+              className="nav-link">
               <img src={iconAboutme} alt={t('navbar.aboutme')} />
               <h2> {t('navbar.aboutme')} </h2>
-            </NavLink>
+            </ScrollLink>
           </li>
           <li>
-            <NavLink to="/projects" className="nav-link">
+            <ScrollLink to="projects"
+              spy={true}
+              smooth={true}
+              offset={-120}
+              duration={500}
+              className="nav-link">
               <img src={iconProjects} alt={t('navbar.projects')} />
               <h2> {t('navbar.projects')} </h2>
-            </NavLink>
+            </ScrollLink>
           </li>
           <li>
-            <NavLink to="/studies" className="nav-link">
+            <ScrollLink to="studies"
+              spy={true}
+              smooth={true}
+              offset={-120}
+              duration={500}
+              className="nav-link">
               <img src={iconStudies} alt={t('navbar.studies')} />
               <h2>{t('navbar.studies')}</h2>
-            </NavLink></li>
+            </ScrollLink></li>
           <li>
-            <NavLink to="/contact" className="nav-link">
-              <img src={iconContactme} alt={t('navbar.contactme')}/>
+            <ScrollLink to="contact"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              className="nav-link">
+              <img src={iconContactme} alt={t('navbar.contactme')} />
               <h2> {t('navbar.contactme')}</h2>
-            </NavLink>
+            </ScrollLink>
           </li>
         </ul>
       </nav>
-      <Languages />
+      <Languages className="languages" />
     </header>
   )
 }
