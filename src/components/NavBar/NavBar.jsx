@@ -31,7 +31,7 @@ const NavBar = () => {
             <ScrollLink to="projects"
               spy={true}
               smooth={true}
-              offset={-120}
+              offset={-110}
               duration={500}
               className="nav-link">
               <img src={iconProjects} alt={t('navbar.projects')} />

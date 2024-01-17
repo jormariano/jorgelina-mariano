@@ -7,18 +7,20 @@ const Projects = () => {
   const { t } = useTranslation(['global'])
 
   const imgInuyasha = "../../img/project-inuyasha.png"
-  const imgExcel = "../../img/project-excel.png"
+  const imgExcel = "../../img/project-excelarq.png"
   const imgMyTools = "../../img/project-mytools.png"
   const imgBookshop = "../../img/project-bookshop.png"
-  const imgConstruction = '../../img/project-construction.png'
+  const imgLandscapes = "../../img/project-landscapes.png"
+  const imgConstruction = '../../img/project-inconstruction.png'
+  const imgGitHub = "../../icon/footer-github.png"
 
   const imgProjects = [
-    { id: 1, link: 'https://inuyasha-fans.netlify.app', imgSrc: imgInuyasha, imgAlt: t('projects.inuyasha') },
-    { id: 2, link: 'https://excelarq.netlify.app', imgSrc: imgExcel, imgAlt: t('projects.excel') },
-    { id: 3, link: 'https://my-tools-jmariano.netlify.app', imgSrc: imgMyTools, imgAlt: t('projects.mytools') },
-    { id: 4, link: 'https://mybookshop2023.netlify.app', imgSrc: imgBookshop, imgAlt: t('projects.bookshop') },
-    { id: 5, link: '*', imgSrc: imgConstruction, imgAlt: t('projects.construction') },
-    { id: 6, link: '*', imgSrc: imgConstruction, imgAlt: t('projects.construction') },
+    { id: 1, link: 'https://inuyasha-fans.netlify.app', imgSrc: imgInuyasha, imgAlt: t('projects.inuyasha'), project: 'Inuyasha', githubLink: 'https://github.com/jormariano/FanPage-Inuyasha' },
+    { id: 2, link: 'https://excelarq.netlify.app', imgSrc: imgExcel, imgAlt: t('projects.excel'), project: 'Excel.Arq', githubLink: 'https://github.com/jormariano/excel.arq' },
+    { id: 3, link: 'https://my-tools-jmariano.netlify.app', imgSrc: imgMyTools, imgAlt: t('projects.mytools'), project: 'My Tools', githubLink: 'https://github.com/jormariano/My-Tools' },
+    { id: 4, link: 'https://mybookshop2023.netlify.app', imgSrc: imgBookshop, imgAlt: t('projects.bookshop'), project: 'Bookshop', githubLink: 'https://github.com/jormariano/book-shop' },
+    { id: 5, link: 'https://landscapesphotos.netlify.app', imgSrc: imgLandscapes, imgAlt: t('projects.construction'), project: 'Landscapes', githubLink: 'https://github.com/jormariano/landscapes' },
+    { id: 6, link: '*', imgSrc: imgConstruction, imgAlt: t('projects.construction'), project: 'In construction' },
   ];
 
   const variants = {
@@ -36,7 +38,7 @@ const Projects = () => {
   return (
     <section id='projects' className='projects-container'>
       <h3 className='projects-title'> {t('projects.title')} </h3>
-      <div className='project'>
+      <div className='projects'>
         <AnimatePresence>
           {imgProjects.map((project, index) => (
             <a key={project.id} target="_blank" href={project.link} index={index}>
@@ -44,12 +46,15 @@ const Projects = () => {
                 initial="initial"
                 animate="animate"
                 custom={{ index }}
-                whileHover={{ scale: 1.2 }}
                 variants={variants}
                 src={project.imgSrc}
                 alt={project.imgAlt}
-                className='project-img'
+                className='projects-img'
               />
+              <div className='projects-name'>
+                <h2> {project.project} </h2>
+                {project.githubLink && <a href={project.githubLink} target="_blank"><img src={imgGitHub} alt="GitHub" /></a>}
+              </div>
             </a>
           ))}
         </AnimatePresence>

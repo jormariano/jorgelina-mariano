@@ -8,6 +8,7 @@ export const colorStyles = {
         fontSize: "1rem",
         fontWeight: "bold",
         padding: "2px",
+        zIndex: 9999,
 
         "&:hover": {
             borderColor: "#f6b8d5",

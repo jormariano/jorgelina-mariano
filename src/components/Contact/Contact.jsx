@@ -5,11 +5,12 @@ import { useTranslation } from 'react-i18next'
 import { motion, useInView } from 'framer-motion'
 
 const Contact = () => {
+
+    const { t } = useTranslation(['global'])
+    
     const [fullName, setFullName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
-
-    const { t } = useTranslation(['global'])
 
     const sendQuery = (e) => {
         e.preventDefault();
@@ -52,7 +53,7 @@ const Contact = () => {
                 className="contact-container">
                 <form onSubmit={sendQuery} className="contact-form">
 
-                    <h3 className='contact-form-h3'> {t('contacme.title')} </h3>
+                    <h3 className='contact-form-h3'> {t('contactme.title')} </h3>
 
                     <input type="text" placeholder={t('contactme.fullname')} id="fullName" value={fullName} onChange={(e) => setFullName(e.target.value)}></input>
 
